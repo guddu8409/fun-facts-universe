@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>🌌 Fun Facts About the Universe</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 2.5em;
+      color: #00d4ff;
+    }
+
+    #fact {
+      margin: 20px auto;
+      font-size: 1.5em;
+      padding: 20px;
+      max-width: 800px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 212, 255, 0.4);
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 8px;
+      background-color: #00d4ff;
+      color: #000;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #00aacc;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 10px;
+      font-size: 0.9em;
+      color: #bbb;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌌 Fun Facts About the Universe</h1>
+  <div id="fact">Click the button below to discover a fun fact!</div>
+  <button onclick="generateFact()">Generate Another Fun Fact</button>
+
+  <footer>
+    Made with 💫 by GenAI 101 | Topic: The Universe
+  </footer>
+
+  <script>
+    const facts = [
+      "A day on Venus is longer than its year.",
+      "Neutron stars can spin at a rate of 600 rotations per second.",
+      "The observable universe is estimated to contain over 2 trillion galaxies.",
+      "If you fell into a black hole, time would appear to stop for an outside observer.",
+      "Saturn’s moon Titan has lakes of liquid methane.",
+      "The largest known star, UY Scuti, is 1,700 times wider than the Sun.",
+      "The Sun accounts for 99.86% of the mass in our solar system.",
+      "Light from the Sun takes about 8 minutes and 20 seconds to reach Earth.",
+      "Jupiter has a storm (the Great Red Spot) that has been raging for at least 300 years.",
+      "In space, there is no sound because molecules are too far apart to transmit sound waves."
+    ];
+
+    function generateFact() {
+      const randomIndex = Math.floor(Math.random() * facts.length);
+      document.getElementById("fact").textContent = facts[randomIndex];
+    }
+  </script>
+</body>
+</html>
